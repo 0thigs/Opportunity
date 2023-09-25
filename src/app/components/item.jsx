@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import TransitEnterexitIcon from '@mui/icons-material/TransitEnterexit';
+import Link from 'next/link';
 
 export default function Item({ name, description, url}) {
 
@@ -18,16 +20,19 @@ export default function Item({ name, description, url}) {
                 </button>
             </div>
             {visible ?
-                <div className='bg-slate-400 w-2/4 min-w-max p-3 rounded-sm'>
+                <div className='bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 p-3 rounded-lg text-white'>
                     <p className='font-semibold'>
                         {name}
                     </p>
                     <p>
                         {description}
                     </p>
-                    <button>
-                        Ir para o site
-                    </button>
+                    <Link href="url">
+                        <p className='p-2 bg-green-400 rounded-lg flex justify-center items-center font-semibold text-white'>
+                            Ir para o site
+                            <TransitEnterexitIcon className="w-4"/>
+                        </p>
+                    </Link>
                 </div>
                 : null}
         </li>

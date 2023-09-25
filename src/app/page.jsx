@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen bg-slate-700 flex flex-col justify-center items-center gap-20">
+    <div className="w-screen h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 flex flex-col justify-center items-center gap-20">
       <h1 className="font-bold text-7xl text-zinc-100">
         Opportunity
       </h1>
