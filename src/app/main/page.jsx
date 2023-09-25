@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from '../../../public/images/logo.png'
+import Item from '../components/item'
 
 export default function Main() {
   return (
@@ -17,21 +18,17 @@ export default function Main() {
           </p>
           <input type="text" className="outline-none bg-gray-100 rounded-md py-2 px-4 text-md border" placeholder="Pesquisar"/>
         </div>
-        <section className="pt-3">
+        <section className="pt-3 h-full overflow-y-auto">
           <p className="font-light text-gray-400 pb-1">
             Resultados:
           </p> 
           <ul className="flex flex-col gap-2">
-            <li className="">
-              <a href="#">
-                Latin American Leadership Academy
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                The Junior Academy
-              </a>
-            </li>
+            <Item name="The Junior Academy" url="#"/>
+            <Item name="Latin American Leadership Academy" url="#"/>
+            <Item name="The Junior Academy" url="#"/>
+            <Item name="Latin American Leadership Academy" url="#"/>
+            <Item name="The Junior Academy" url="#"/>
+            <Item name="Latin American Leadership Academy" url="#"/>
           </ul>
         </section>
       </main>
