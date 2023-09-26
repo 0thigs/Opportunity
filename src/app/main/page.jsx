@@ -11,7 +11,7 @@ export default function Main() {
         </h1>
         <Image src={Logo} width={25} alt="Picture of the author" />
       </header>
-      <main className="bg-white rounded-lg p-10 w-3/5 h-3/6 min-w-[350px] shadow-xl shadow-gray-900 flex flex-col">
+      <main className="bg-white rounded-lg p-10 w-3/5 h-[600px] min-w-[350px] shadow-xl shadow-gray-900 flex flex-col">
         <div className="flex flex-col justify-center gap-2 border-b pb-5">
           <p className="text-lg font-semibold">
             Nome do Programa
@@ -23,12 +23,13 @@ export default function Main() {
             Resultados:
           </p> 
           <ul className="flex flex-col gap-2">
-            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"}/>
-            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"}/>
-            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"}/>
-            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"}/>
-            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"}/>
-            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"}/>
+            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"} url={"https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/"}/>
+            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"} url={"https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/"}/>
+            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"} url={"https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/"}/>
+            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"} url={"https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/"}/>
+            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"} url={"https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/"}/>
+            <Item name="The Junior Academy" description={"The Junior Academy is a passionate community of problem solvers made up of talented students, STEM experts, and industry leaders from around the world. Junior Academy members are elite students and mentors who are dedicated to designing innovative solutions to society’s greatest challenges!"} url={"https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/"}/>
+
           </ul>
         </section>
       </main>
