@@ -1,12 +1,12 @@
 "use client"
-import React, { useState } from 'react';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import TransitEnterexitIcon from '@mui/icons-material/TransitEnterexit';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export default function Item({ name, description, url}) {
+export default function Item({ name, description, url }) {
 
     const [visible, setVisible] = useState(false)
 
@@ -14,7 +14,7 @@ export default function Item({ name, description, url}) {
         <li className="flex justify-center items-start flex-col gap-1">
             <div>
                 <button onClick={() => { setVisible(!visible) }} className='flex justify-center items-center'>
-                {visible?<ArrowDropDownIcon/>:<ArrowRightIcon />}
+                    {visible ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
                     <p className='text-lg'>
                         {name}
                     </p>
@@ -31,7 +31,7 @@ export default function Item({ name, description, url}) {
                     <Link href={url} target='_blank'>
                         <p className='p-2 bg-green-400 rounded-lg flex justify-center items-center font-semibold text-white'>
                             Ir para o site
-                            <TransitEnterexitIcon className="w-4"/>
+                            <TransitEnterexitIcon className="w-4" />
                         </p>
                     </Link>
                 </div>
