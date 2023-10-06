@@ -2,12 +2,25 @@
 import Image from "next/image";
 import Logo from '../../../public/images/logo.png'
 import Item from '../../components/item'
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 export default function main({data}) {
-
+    const [input, setInput] = useState("")
+    const [filteredItems, setFilteredItems] = useState([]);
     const items = data
-
+    
+    const handleInputChange = (event) => {
+        setInput(event.target.value);
+    };
+    
+    useEffect(() => {
+      const filteredItems = data.filter(item => {
+          return item.name.toLowerCase().includes(input.toLowerCase());
+      });
+      setFilteredItems(filteredItems);
+    }, [input, data]);
+    
     return (
         <div className="w-screen h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 flex flex-col justify-center items-center gap-20">
             <header className="from-slate-900 via-slate-800 to-slate-900 border-b-gray-600 border-b w-full flex justify-start items-center p-10 absolute top-0 gap-1">
@@ -21,14 +34,14 @@ export default function main({data}) {
                     <p className="text-lg font-semibold">
                         Nome do Programa
                     </p>
-                    <input type="text" className="outline-none bg-gray-100 rounded-md py-2 px-4 text-md border" placeholder="Pesquisar" />
+                    <input type="text" className="outline-none bg-gray-100 rounded-md py-2 px-4 text-md border" placeholder="Pesquisar" value={input} onChange={handleInputChange} />
                 </div>
                 <section className="pt-3 h-full overflow-auto">
                     <p className="font-light text-gray-400 pb-1 text-lg">
                         Resultados:
                     </p>
                     <ul className="flex flex-col gap-2">
-                        {items.map((item) => {
+                        {filteredItems.map((item) => {
                             return <Item key={item.id} name={item.name} description={item.description} url={item.url} />
                         })}
                     </ul>

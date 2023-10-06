@@ -7,7 +7,7 @@ export async function getItems() {
   const { data } = await supabase
   .from("programs")
   .select("*")
-  .order("id")
+  .order("name")
 
   return data
 }
