@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 export default function main({data}) {
     const [input, setInput] = useState("")
     const [filteredItems, setFilteredItems] = useState([]);
-    const items = data
     
     const handleInputChange = (event) => {
         setInput(event.target.value);
