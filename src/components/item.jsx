@@ -11,7 +11,7 @@ export default function Item({ name, description, url }) {
     const [visible, setVisible] = useState(false)
 
     return (
-        <li className="flex justify-center items-start flex-col gap-1">
+        <li className="flex justify-center items-start flex-col gap-1 border border-zinc-300 rounded-lg p-3 shadow shadow-md">
             <div>
                 <button onClick={() => { setVisible(!visible) }} className='flex justify-center items-center'>
                     {visible ? <ArrowDropDownIcon /> : <ArrowRightIcon />}
