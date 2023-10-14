@@ -1,9 +1,10 @@
 "use client"
+import { createClient } from '@supabase/supabase-js';
 import Logo from '../../../public/images/logo.png'
 import Image from 'next/image';
-import supabase from '../../config/supabaseClient';
 import { useState } from 'react'
 
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.NEXT_PUBLIC_SUPABASE_KEY)
 
 export default function adminUI({ data }) {
   const [name, setName] = useState("")
@@ -12,7 +13,16 @@ export default function adminUI({ data }) {
 
 
   const SendData = async (e) => {
+    console.log(name, description, link)
     
+    const { data, error } = await supabase
+    .from('programs')
+    .insert([{name: name, description: description, url: link}])
+    .select()
+
+    if (error) {
+      console.log("POST falhou")
+    }
   }
 
   return (
