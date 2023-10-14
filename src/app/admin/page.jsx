@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
-import MainUI from "../mainUI/page";
+import AdminUI from '../adminUI/pages'
 
-export async function getItems() {
+export async function getData() {
   const supabase = createClient(process.env.PUBLIC_SUPABASE_URL, process.env.SUPABASE_KEY);
 
   const { data } = await supabase
@@ -12,13 +12,11 @@ export async function getItems() {
   return data
 }
 
-export const revalidate = 0
- 
-export default async function Main() {
-
-  const items = await getItems();
+export default function admin() {    
+  
+  const data = getData();
 
   return (
-    <MainUI data={items}/>
+    <AdminUI data={data}/>
   );
 }
