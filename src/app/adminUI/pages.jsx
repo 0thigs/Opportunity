@@ -1,10 +1,19 @@
 "use client"
 import Logo from '../../../public/images/logo.png'
 import Image from 'next/image';
-import { useState, useEffect } from 'react'
+import supabase from '../../config/supabaseClient';
+import { useState } from 'react'
 
 
 export default function adminUI({ data }) {
+  const [name, setName] = useState("")
+  const [description, setDescription] = useState("")
+  const [link, setLink] = useState("")
+
+
+  const SendData = async (e) => {
+    
+  }
 
   return (
     <div className="w-screen h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 flex flex-col justify-center items-center gap-20">
@@ -24,21 +33,21 @@ export default function adminUI({ data }) {
               <p className='text-lg my-2'>
                 Nome do Programa
               </p>
-              <input className='border p-2 rounded-md w-80' placeholder='Insira o nome do programa'></input>
+              <input className='border p-2 rounded-md w-80' placeholder='Insira o nome do programa' onChange={(e) => {setName(e.target.value)}}></input>
             </div>
             <div>
               <p className='text-lg my-2'>
                 Descrição do Programa
               </p>
-              <textarea className='border p-2 rounded-md w-80 max-h-40' placeholder='Insira a descrição'></textarea>
+              <textarea className='border p-2 rounded-md w-80 max-h-40' placeholder='Insira a descrição' onChange={(e) => {setDescription(e.target.value)}}></textarea>
             </div>
             <div>
               <p className='text-lg my-2'>
                 Link para o site do Programa
               </p>
-              <input className='border p-2 rounded-md w-80' placeholder='Insira o link para o site'></input>
+              <input className='border p-2 rounded-md w-80' placeholder='Insira o link para o site' onChange={(e) => {setLink(e.target.value)}}></input>
             </div>
-            <button className='border-zinc-300 border p-2 rounded-md bg-green-500 shadow-md hover:bg-green-600 transition-all text-black hover:text-white duration-300'>INSERIR</button>
+            <button className='border-zinc-300 border p-2 rounded-md bg-green-500 shadow-md hover:bg-green-600 transition-all text-black hover:text-white duration-300' onClick={SendData}>INSERIR</button>
           </section>
           <span className=''></span>
           <section className='flex flex-col justify-center items-center gap-5'>

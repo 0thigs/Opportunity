@@ -1,8 +1,7 @@
-import { createClient } from '@supabase/supabase-js';
 import MainUI from "../mainUI/page";
+import supabase from '../../config/supabaseClient'
 
 export async function getItems() {
-  const supabase = createClient(process.env.PUBLIC_SUPABASE_URL, process.env.SUPABASE_KEY);
 
   const { data } = await supabase
   .from("programs")
