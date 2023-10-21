@@ -19,7 +19,7 @@ export default function main({data}) {
       });
       setFilteredItems(filteredItems);
     }, [input, data]);
-    
+
     return (
         <div className="w-screen h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 flex flex-col justify-center items-center gap-20">
             <header className="from-slate-900 via-slate-800 to-slate-900 border-b-gray-600 border-b w-full flex justify-start items-center p-10 absolute top-0 gap-1">

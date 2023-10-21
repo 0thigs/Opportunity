@@ -1,19 +1,11 @@
 import AdminUI from '../adminUI/pages'
-import supabase from '../../config/supabaseClient';
+import { getItems } from '../../api/getItems'; 
 
-export async function getData() {
-  
-  const { data } = await supabase
-  .from("programs")
-  .select("*")
-  .order("name")
+export const revalidate = 0
 
-  return data
-}
+export default async function admin() {    
 
-export default function admin() {    
-  
-  const data = getData();
+  const data = await getItems()
 
   return (
     <AdminUI data={data}/>
