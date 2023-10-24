@@ -2,7 +2,7 @@
 import supabase from '../../config/supabaseClient';
 import Logo from '../../../public/images/logo.png'
 import Image from 'next/image';
-import Item from '../../components/item';
+import ItemRemoveUI from '../../components/itemRemoveUI';
 import { useState, useEffect } from 'react'
 
 export default function adminUI({ data }) {
@@ -71,11 +71,11 @@ export default function adminUI({ data }) {
             <button className='border-zinc-300 border p-2 rounded-md bg-green-500 shadow-md hover:bg-green-600 transition-all text-black hover:text-white duration-300' onClick={SendData}>INSERIR</button>
           </section>
           <span className=''></span>
-          <section className='flex flex-col justify-center items-center gap-5 w-96'>
+          <section className='flex flex-col justify-center items-center gap-5 w-[25rem]'>
             <input type="text" className="outline-none bg-gray-100 rounded-md py-2 px-4 text-md border w-full" placeholder="Pesquisar" value={input} onChange={handleInputChange} />
             <ul className="flex flex-col gap-2">
               {filteredItems.map((item) => {
-                return <Item key={item.id} name={item.name} description={item.description} url={item.url} />
+                return <ItemRemoveUI key={item.id} id={item.id} name={item.name} description={item.description} url={item.url}/>
               })}
             </ul>
           </section>
