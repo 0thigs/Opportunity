@@ -3,12 +3,14 @@ import Logo from '../../../public/images/logo.png'
 import Image from 'next/image';
 import ItemRemoveUI from '../../components/itemRemoveUI';
 import { useState, useEffect } from 'react'
-import supabase from '../../config/supabaseClient';
+import { createClient } from '../../config/supabaseClient'
 
-export default function adminUI({ data }) {
+
+export default function AdminUI({ data }) {
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
   const [link, setLink] = useState("")
+  const supabase = createClient()
 
   const SendData = async (e) => {
     const { data } = await supabase

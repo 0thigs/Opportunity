@@ -5,7 +5,7 @@ import Item from '../../components/item'
 import { useState, useEffect } from "react";
 
 
-export default function main({data}) {
+export default function Main({data}) {
     const [input, setInput] = useState("")
     const [filteredItems, setFilteredItems] = useState([]);
     

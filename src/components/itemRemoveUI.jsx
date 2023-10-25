@@ -10,7 +10,6 @@ import { useState } from 'react';
 export default function ItemRemove({ id, name, description, url}) {
 
     function handleRemove() {
-        console.log(id)
         removeItem(id)
     }
 
