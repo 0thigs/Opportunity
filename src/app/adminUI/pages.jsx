@@ -1,9 +1,9 @@
 "use client"
-import supabase from '../../config/supabaseClient';
 import Logo from '../../../public/images/logo.png'
 import Image from 'next/image';
 import ItemRemoveUI from '../../components/itemRemoveUI';
 import { useState, useEffect } from 'react'
+import supabase from '../../config/supabaseClient';
 
 export default function adminUI({ data }) {
   const [name, setName] = useState("")
@@ -11,8 +11,6 @@ export default function adminUI({ data }) {
   const [link, setLink] = useState("")
 
   const SendData = async (e) => {
-    console.log(name, description, link)
-
     const { data } = await supabase
       .from('programs')
       .insert([{ name: name, description: description, url: link }])
@@ -32,9 +30,6 @@ export default function adminUI({ data }) {
     });
     setFilteredItems(filteredItems);
   }, [input, data]);
-
-
-  console.log(data)
 
   return (
     <div className="w-screen h-screen bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 flex flex-col justify-center items-center gap-20">
