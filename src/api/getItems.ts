@@ -1,6 +1,8 @@
-import supabase from '../config/supabaseClient'
+import { createClient } from '../config/supabaseClient'
+
 
 export async function getItems() {
+    const supabase = createClient()
 
     const { data } = await supabase
     .from("programs")
