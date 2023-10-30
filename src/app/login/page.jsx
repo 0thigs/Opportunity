@@ -15,6 +15,8 @@ export default function Login() {
                 <div className="flex flex-col justify-center gap-2 border-b pb-5">
                     LOGIN
                 </div>
+                <div className="w-full h-auto justify-center items-center">
+                </div>
             </main>
         </div>
   );
