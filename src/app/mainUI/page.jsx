@@ -30,7 +30,7 @@ export default function Main({data}) {
                     <Image src={Logo} width={25} alt="Picture of the author" />
                 </div>
                 <div>
-                    <Link className="text-zinc-50 font-bold text-xl hover:text-zinc-400 transition-all duration-150" href={"../loginUI"}>
+                    <Link className="text-zinc-50 font-semibold text-xl hover:text-zinc-400 transition-all duration-150" href={"../loginUI"}>
                         Login
                     </Link>
                 </div>

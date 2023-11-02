@@ -2,17 +2,17 @@
 import Image from "next/image";
 import Logo from '../../../public/images/logo.png'
 import { useState } from "react";
+import { VerifyAdmin } from "../login/login"
 
-export default function LoginUI({}) {
+export default function LoginUI() {
     const [user, setUser] = useState("")
-    const password = process.env.ADMIN_USER
 
     function handleLogin() {
-        if (user === password) {
-        } 
-        else {
-            console.log(user)
+        VerifyAdmin(user)
+        if (VerifyAdmin(user)) {
+            console.log(true)
         }
+        else console.log(false)
     }
 
     return (
@@ -29,7 +29,9 @@ export default function LoginUI({}) {
                 </div>
                 <section className="flex justify-center items-center h-full">
                     <div className="flex flex-col justify-center items-center gap-3">
-                        <p className="text-[15px]">USER</p>
+                        <p className="text-[15px]">
+                            USERNAME
+                        </p>
                         <input type="text" className="outline-none bg-gray-100 rounded-md py-2 px-4 text-md border" onChange={(e) => {setUser(e.target.value)}}/>
                         <button className="p-3 border rounded-lg mt-5 transition duration-200 hover:border-zinc-400 focus:border-green-500" onClick={handleLogin}>
                             ENTRAR
