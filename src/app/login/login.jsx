@@ -1,11 +1,12 @@
 'use server'
+const password = process.env.ADMIN_USER
 
 export const VerifyAdmin = (input) => {
-    const password = process.env.ADMIN_USER
-
+    
     if (input === password) {
-        return true
-        console.log(password)
+        console.log(true)
     }
-    else return false
+    else {
+        console.log(false)
+    }
 } 

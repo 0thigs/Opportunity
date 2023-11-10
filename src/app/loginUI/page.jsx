@@ -8,11 +8,13 @@ export default function LoginUI() {
     const [user, setUser] = useState("")
 
     function handleLogin() {
-        VerifyAdmin(user)
-        if (VerifyAdmin(user)) {
-            console.log(true)
+        const verification = VerifyAdmin(user)
+
+        if(verification === true) {
+            console.log('Deu certo')
+        } else {
+            console.log("nao deu certo")
         }
-        else console.log(false)
     }
 
     return (
