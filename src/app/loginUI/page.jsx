@@ -11,9 +11,9 @@ export default function LoginUI() {
         const verification = VerifyAdmin(user)
 
         if(verification === true) {
-            console.log('Deu certo!')
+            console.log('Deu certo')
         } else {
-            console.log("nao deu certo!")
+            console.log("nao deu certo")
         }
     }
 
